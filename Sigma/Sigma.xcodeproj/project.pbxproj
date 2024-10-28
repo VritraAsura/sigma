@@ -12,6 +12,13 @@
 		0DE9B1AE2CCC58F50060B154 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE9B1AD2CCC58F50060B154 /* ViewController.swift */; };
 		0DE9B1B32CCC58F70060B154 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0DE9B1B22CCC58F70060B154 /* Assets.xcassets */; };
 		0DE9B1B62CCC58F70060B154 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0DE9B1B42CCC58F70060B154 /* LaunchScreen.storyboard */; };
+		0DE9B1BF2CCEC5680060B154 /* Stevia in Frameworks */ = {isa = PBXBuildFile; productRef = 0DE9B1BE2CCEC5680060B154 /* Stevia */; };
+		0DE9B1C52CCFDEC00060B154 /* ClientModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE9B1C42CCFDEC00060B154 /* ClientModel.swift */; };
+		0DE9B1C72CD015AC0060B154 /* SellerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE9B1C62CD015AC0060B154 /* SellerModel.swift */; };
+		0DE9B1C92CD0165D0060B154 /* VehicleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE9B1C82CD0165D0060B154 /* VehicleModel.swift */; };
+		0DE9B1CB2CD017A70060B154 /* OperationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE9B1CA2CD017A60060B154 /* OperationModel.swift */; };
+		0DE9B1CD2CD01AE20060B154 /* OrderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE9B1CC2CD01AE20060B154 /* OrderModel.swift */; };
+		0DE9B1CF2CD01B4A0060B154 /* ManufacturerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE9B1CE2CD01B4A0060B154 /* ManufacturerModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +29,13 @@
 		0DE9B1B22CCC58F70060B154 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0DE9B1B52CCC58F70060B154 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0DE9B1B72CCC58F70060B154 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0DE9B1C02CCECA400060B154 /* Sigma.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Sigma.entitlements; sourceTree = "<group>"; };
+		0DE9B1C42CCFDEC00060B154 /* ClientModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientModel.swift; sourceTree = "<group>"; };
+		0DE9B1C62CD015AC0060B154 /* SellerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SellerModel.swift; sourceTree = "<group>"; };
+		0DE9B1C82CD0165D0060B154 /* VehicleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleModel.swift; sourceTree = "<group>"; };
+		0DE9B1CA2CD017A60060B154 /* OperationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperationModel.swift; sourceTree = "<group>"; };
+		0DE9B1CC2CD01AE20060B154 /* OrderModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderModel.swift; sourceTree = "<group>"; };
+		0DE9B1CE2CD01B4A0060B154 /* ManufacturerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManufacturerModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0DE9B1BF2CCEC5680060B154 /* Stevia in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,6 +69,8 @@
 		0DE9B1A82CCC58F50060B154 /* Sigma */ = {
 			isa = PBXGroup;
 			children = (
+				0DE9B1C32CCFDE7F0060B154 /* Models */,
+				0DE9B1C02CCECA400060B154 /* Sigma.entitlements */,
 				0DE9B1A92CCC58F50060B154 /* AppDelegate.swift */,
 				0DE9B1AB2CCC58F50060B154 /* SceneDelegate.swift */,
 				0DE9B1AD2CCC58F50060B154 /* ViewController.swift */,
@@ -62,6 +79,19 @@
 				0DE9B1B72CCC58F70060B154 /* Info.plist */,
 			);
 			path = Sigma;
+			sourceTree = "<group>";
+		};
+		0DE9B1C32CCFDE7F0060B154 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0DE9B1C42CCFDEC00060B154 /* ClientModel.swift */,
+				0DE9B1C62CD015AC0060B154 /* SellerModel.swift */,
+				0DE9B1C82CD0165D0060B154 /* VehicleModel.swift */,
+				0DE9B1CA2CD017A60060B154 /* OperationModel.swift */,
+				0DE9B1CC2CD01AE20060B154 /* OrderModel.swift */,
+				0DE9B1CE2CD01B4A0060B154 /* ManufacturerModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -80,6 +110,9 @@
 			dependencies = (
 			);
 			name = Sigma;
+			packageProductDependencies = (
+				0DE9B1BE2CCEC5680060B154 /* Stevia */,
+			);
 			productName = Sigma;
 			productReference = 0DE9B1A62CCC58F50060B154 /* Sigma.app */;
 			productType = "com.apple.product-type.application";
@@ -108,6 +141,9 @@
 				Base,
 			);
 			mainGroup = 0DE9B19D2CCC58F50060B154;
+			packageReferences = (
+				0DE9B1BD2CCEC5680060B154 /* XCRemoteSwiftPackageReference "Stevia" */,
+			);
 			productRefGroup = 0DE9B1A72CCC58F50060B154 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -134,8 +170,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0DE9B1CD2CD01AE20060B154 /* OrderModel.swift in Sources */,
+				0DE9B1C52CCFDEC00060B154 /* ClientModel.swift in Sources */,
+				0DE9B1CF2CD01B4A0060B154 /* ManufacturerModel.swift in Sources */,
 				0DE9B1AE2CCC58F50060B154 /* ViewController.swift in Sources */,
 				0DE9B1AA2CCC58F50060B154 /* AppDelegate.swift in Sources */,
+				0DE9B1CB2CD017A70060B154 /* OperationModel.swift in Sources */,
+				0DE9B1C72CD015AC0060B154 /* SellerModel.swift in Sources */,
+				0DE9B1C92CD0165D0060B154 /* VehicleModel.swift in Sources */,
 				0DE9B1AC2CCC58F50060B154 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -273,8 +315,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Sigma/Sigma.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Sigma/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -289,9 +333,12 @@
 				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.VitraAsura.Sigma;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
 		};
@@ -300,8 +347,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Sigma/Sigma.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Sigma/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -316,9 +365,12 @@
 				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.VitraAsura.Sigma;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Release;
 		};
@@ -344,6 +396,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		0DE9B1BD2CCEC5680060B154 /* XCRemoteSwiftPackageReference "Stevia" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/freshOS/Stevia";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		0DE9B1BE2CCEC5680060B154 /* Stevia */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0DE9B1BD2CCEC5680060B154 /* XCRemoteSwiftPackageReference "Stevia" */;
+			productName = Stevia;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 0DE9B19E2CCC58F50060B154 /* Project object */;
 }

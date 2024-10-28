@@ -6,14 +6,19 @@
 //
 
 import UIKit
+import Stevia
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+
+        let label = UILabel()
+        view.subviews(label)
+        label.centerInContainer()
+        label.style { s in
+            s.text = "Sigma"
+            s.textColor = .label
+        }
     }
-
-
 }
-

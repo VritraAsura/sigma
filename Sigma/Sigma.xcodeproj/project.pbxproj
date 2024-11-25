@@ -7,9 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D067E8B2CD1AFCB006FA958 /* ClientsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D067E8A2CD1AFCB006FA958 /* ClientsListViewController.swift */; };
+		0D067E912CD5950E006FA958 /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D067E902CD5950E006FA958 /* UITableView+Extension.swift */; };
+		0D227AF42CF421E800C92CD8 /* HomeSplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D227AF32CF421E800C92CD8 /* HomeSplitViewController.swift */; };
+		0D227AF62CF42A3500C92CD8 /* HomeOptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D227AF52CF42A3500C92CD8 /* HomeOptionsViewController.swift */; };
+		0D227AF82CF42A5A00C92CD8 /* HomeOptionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D227AF72CF42A5A00C92CD8 /* HomeOptionsView.swift */; };
+		0D7B81E82CE7D2B30056F965 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D7B81E72CE7D2B30056F965 /* LoginViewController.swift */; };
+		0D7B81EA2CE7D3000056F965 /* UICodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D7B81E92CE7D3000056F965 /* UICodeViewController.swift */; };
+		0D7B81EC2CE7D3D10056F965 /* UICodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D7B81EB2CE7D3D10056F965 /* UICodeView.swift */; };
+		0D7B81EE2CE7D4820056F965 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D7B81ED2CE7D4820056F965 /* LoginView.swift */; };
+		0D7B81F02CE7D5670056F965 /* UIPaddingTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D7B81EF2CE7D5670056F965 /* UIPaddingTextField.swift */; };
+		0D7B81F22CE7DE890056F965 /* UIStackView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D7B81F12CE7DE890056F965 /* UIStackView+Extension.swift */; };
+		0D7B81F72CE835A70056F965 /* CoreDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0D7B81F52CE835A70056F965 /* CoreDataModel.xcdatamodeld */; };
+		0D7B81F92CE83A400056F965 /* CoreDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D7B81F82CE83A400056F965 /* CoreDataModel.swift */; };
+		0D7B81FB2CE83A800056F965 /* CoreDataStoring.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D7B81FA2CE83A800056F965 /* CoreDataStoring.swift */; };
+		0D7B81FF2CE83B890056F965 /* UserEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D7B81FE2CE83B890056F965 /* UserEntity.swift */; };
+		0D7B82012CE843BB0056F965 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D7B82002CE843BB0056F965 /* String+Extension.swift */; };
+		0D7B82052CEC0A520056F965 /* LoginDomain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D7B82042CEC0A520056F965 /* LoginDomain.swift */; };
+		0D7B82072CEF5F260056F965 /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D7B82062CEF5F260056F965 /* UIButton+Extension.swift */; };
 		0DE9B1AA2CCC58F50060B154 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE9B1A92CCC58F50060B154 /* AppDelegate.swift */; };
 		0DE9B1AC2CCC58F50060B154 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE9B1AB2CCC58F50060B154 /* SceneDelegate.swift */; };
-		0DE9B1AE2CCC58F50060B154 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE9B1AD2CCC58F50060B154 /* ViewController.swift */; };
 		0DE9B1B32CCC58F70060B154 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0DE9B1B22CCC58F70060B154 /* Assets.xcassets */; };
 		0DE9B1B62CCC58F70060B154 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0DE9B1B42CCC58F70060B154 /* LaunchScreen.storyboard */; };
 		0DE9B1BF2CCEC5680060B154 /* Stevia in Frameworks */ = {isa = PBXBuildFile; productRef = 0DE9B1BE2CCEC5680060B154 /* Stevia */; };
@@ -22,10 +39,27 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0D067E8A2CD1AFCB006FA958 /* ClientsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientsListViewController.swift; sourceTree = "<group>"; };
+		0D067E902CD5950E006FA958 /* UITableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
+		0D227AF32CF421E800C92CD8 /* HomeSplitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSplitViewController.swift; sourceTree = "<group>"; };
+		0D227AF52CF42A3500C92CD8 /* HomeOptionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeOptionsViewController.swift; sourceTree = "<group>"; };
+		0D227AF72CF42A5A00C92CD8 /* HomeOptionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeOptionsView.swift; sourceTree = "<group>"; };
+		0D7B81E72CE7D2B30056F965 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		0D7B81E92CE7D3000056F965 /* UICodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICodeViewController.swift; sourceTree = "<group>"; };
+		0D7B81EB2CE7D3D10056F965 /* UICodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICodeView.swift; sourceTree = "<group>"; };
+		0D7B81ED2CE7D4820056F965 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		0D7B81EF2CE7D5670056F965 /* UIPaddingTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIPaddingTextField.swift; sourceTree = "<group>"; };
+		0D7B81F12CE7DE890056F965 /* UIStackView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+Extension.swift"; sourceTree = "<group>"; };
+		0D7B81F62CE835A70056F965 /* CoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreData.xcdatamodel; sourceTree = "<group>"; };
+		0D7B81F82CE83A400056F965 /* CoreDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataModel.swift; sourceTree = "<group>"; };
+		0D7B81FA2CE83A800056F965 /* CoreDataStoring.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStoring.swift; sourceTree = "<group>"; };
+		0D7B81FE2CE83B890056F965 /* UserEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserEntity.swift; sourceTree = "<group>"; };
+		0D7B82002CE843BB0056F965 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		0D7B82042CEC0A520056F965 /* LoginDomain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginDomain.swift; sourceTree = "<group>"; };
+		0D7B82062CEF5F260056F965 /* UIButton+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
 		0DE9B1A62CCC58F50060B154 /* Sigma.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sigma.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DE9B1A92CCC58F50060B154 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0DE9B1AB2CCC58F50060B154 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		0DE9B1AD2CCC58F50060B154 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		0DE9B1B22CCC58F70060B154 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0DE9B1B52CCC58F70060B154 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0DE9B1B72CCC58F70060B154 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -50,6 +84,109 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0D067E882CD1AF8B006FA958 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				0D7B81E62CE7D2890056F965 /* Login */,
+				0D227AF22CF421D000C92CD8 /* Home */,
+				0D067E892CD1AFB2006FA958 /* Client */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		0D067E892CD1AFB2006FA958 /* Client */ = {
+			isa = PBXGroup;
+			children = (
+				0D067E8A2CD1AFCB006FA958 /* ClientsListViewController.swift */,
+			);
+			path = Client;
+			sourceTree = "<group>";
+		};
+		0D067E8C2CD5941C006FA958 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				0D067E8E2CD5942D006FA958 /* Classes */,
+				0D067E8F2CD59437006FA958 /* Extensions */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		0D067E8E2CD5942D006FA958 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				0D7B81E92CE7D3000056F965 /* UICodeViewController.swift */,
+				0D7B81EB2CE7D3D10056F965 /* UICodeView.swift */,
+				0D7B81EF2CE7D5670056F965 /* UIPaddingTextField.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		0D067E8F2CD59437006FA958 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				0D067E902CD5950E006FA958 /* UITableView+Extension.swift */,
+				0D7B81F12CE7DE890056F965 /* UIStackView+Extension.swift */,
+				0D7B82002CE843BB0056F965 /* String+Extension.swift */,
+				0D7B82062CEF5F260056F965 /* UIButton+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		0D227AF22CF421D000C92CD8 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				0D227AF72CF42A5A00C92CD8 /* HomeOptionsView.swift */,
+				0D227AF52CF42A3500C92CD8 /* HomeOptionsViewController.swift */,
+				0D227AF32CF421E800C92CD8 /* HomeSplitViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		0D7B81E62CE7D2890056F965 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				0D7B81ED2CE7D4820056F965 /* LoginView.swift */,
+				0D7B81E72CE7D2B30056F965 /* LoginViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		0D7B81F32CE8354E0056F965 /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				0D7B81FD2CE83B5E0056F965 /* Entities */,
+				0D7B81F42CE8357C0056F965 /* CoreData */,
+			);
+			path = Storage;
+			sourceTree = "<group>";
+		};
+		0D7B81F42CE8357C0056F965 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				0D7B81F52CE835A70056F965 /* CoreDataModel.xcdatamodeld */,
+				0D7B81F82CE83A400056F965 /* CoreDataModel.swift */,
+				0D7B81FA2CE83A800056F965 /* CoreDataStoring.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		0D7B81FD2CE83B5E0056F965 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				0D7B81FE2CE83B890056F965 /* UserEntity.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		0D7B82032CEC0A020056F965 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				0DE9B1C32CCFDE7F0060B154 /* Models */,
+				0D7B82042CEC0A520056F965 /* LoginDomain.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
 		0DE9B19D2CCC58F50060B154 = {
 			isa = PBXGroup;
 			children = (
@@ -69,11 +206,13 @@
 		0DE9B1A82CCC58F50060B154 /* Sigma */ = {
 			isa = PBXGroup;
 			children = (
-				0DE9B1C32CCFDE7F0060B154 /* Models */,
+				0D7B81F32CE8354E0056F965 /* Storage */,
+				0D7B82032CEC0A020056F965 /* Domain */,
+				0D067E882CD1AF8B006FA958 /* Scenes */,
+				0D067E8C2CD5941C006FA958 /* Components */,
 				0DE9B1C02CCECA400060B154 /* Sigma.entitlements */,
 				0DE9B1A92CCC58F50060B154 /* AppDelegate.swift */,
 				0DE9B1AB2CCC58F50060B154 /* SceneDelegate.swift */,
-				0DE9B1AD2CCC58F50060B154 /* ViewController.swift */,
 				0DE9B1B22CCC58F70060B154 /* Assets.xcassets */,
 				0DE9B1B42CCC58F70060B154 /* LaunchScreen.storyboard */,
 				0DE9B1B72CCC58F70060B154 /* Info.plist */,
@@ -170,14 +309,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D7B81E82CE7D2B30056F965 /* LoginViewController.swift in Sources */,
+				0D7B81F92CE83A400056F965 /* CoreDataModel.swift in Sources */,
+				0D7B81F02CE7D5670056F965 /* UIPaddingTextField.swift in Sources */,
+				0D7B81F72CE835A70056F965 /* CoreDataModel.xcdatamodeld in Sources */,
+				0D227AF42CF421E800C92CD8 /* HomeSplitViewController.swift in Sources */,
+				0D7B81FF2CE83B890056F965 /* UserEntity.swift in Sources */,
+				0D7B82052CEC0A520056F965 /* LoginDomain.swift in Sources */,
+				0D067E912CD5950E006FA958 /* UITableView+Extension.swift in Sources */,
+				0D7B81EA2CE7D3000056F965 /* UICodeViewController.swift in Sources */,
+				0D7B81EE2CE7D4820056F965 /* LoginView.swift in Sources */,
 				0DE9B1CD2CD01AE20060B154 /* OrderModel.swift in Sources */,
 				0DE9B1C52CCFDEC00060B154 /* ClientModel.swift in Sources */,
+				0D7B81FB2CE83A800056F965 /* CoreDataStoring.swift in Sources */,
+				0D7B81F22CE7DE890056F965 /* UIStackView+Extension.swift in Sources */,
+				0D227AF62CF42A3500C92CD8 /* HomeOptionsViewController.swift in Sources */,
+				0D7B82012CE843BB0056F965 /* String+Extension.swift in Sources */,
 				0DE9B1CF2CD01B4A0060B154 /* ManufacturerModel.swift in Sources */,
-				0DE9B1AE2CCC58F50060B154 /* ViewController.swift in Sources */,
 				0DE9B1AA2CCC58F50060B154 /* AppDelegate.swift in Sources */,
+				0D067E8B2CD1AFCB006FA958 /* ClientsListViewController.swift in Sources */,
 				0DE9B1CB2CD017A70060B154 /* OperationModel.swift in Sources */,
 				0DE9B1C72CD015AC0060B154 /* SellerModel.swift in Sources */,
+				0D7B81EC2CE7D3D10056F965 /* UICodeView.swift in Sources */,
+				0D227AF82CF42A5A00C92CD8 /* HomeOptionsView.swift in Sources */,
 				0DE9B1C92CD0165D0060B154 /* VehicleModel.swift in Sources */,
+				0D7B82072CEF5F260056F965 /* UIButton+Extension.swift in Sources */,
 				0DE9B1AC2CCC58F50060B154 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -318,9 +474,10 @@
 				CODE_SIGN_ENTITLEMENTS = Sigma/Sigma.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = XCSQ883CT6;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Sigma/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.shopping";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
@@ -350,9 +507,10 @@
 				CODE_SIGN_ENTITLEMENTS = Sigma/Sigma.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = XCSQ883CT6;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Sigma/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.shopping";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
@@ -415,6 +573,19 @@
 			productName = Stevia;
 		};
 /* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		0D7B81F52CE835A70056F965 /* CoreDataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				0D7B81F62CE835A70056F965 /* CoreData.xcdatamodel */,
+			);
+			currentVersion = 0D7B81F62CE835A70056F965 /* CoreData.xcdatamodel */;
+			path = CoreDataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 0DE9B19E2CCC58F50060B154 /* Project object */;
 }

@@ -26,8 +26,7 @@ final class LoginViewController: UICodeViewController<LoginView> {
         let isValid = loginDomain.doLogin(username: username, password: password)
         print("is valid user: \(isValid)")
 
-        let other = UIViewController()
-        other.view.backgroundColor = .systemBackground
-        navigationController?.pushViewController(other, animated: true)
+        let home = HomeSplitViewController()
+        self.view.window?.swapRootViewController(home, animationType: .push)
     }
 }

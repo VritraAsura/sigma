@@ -25,6 +25,13 @@
 		0D7B82012CE843BB0056F965 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D7B82002CE843BB0056F965 /* String+Extension.swift */; };
 		0D7B82052CEC0A520056F965 /* LoginDomain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D7B82042CEC0A520056F965 /* LoginDomain.swift */; };
 		0D7B82072CEF5F260056F965 /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D7B82062CEF5F260056F965 /* UIButton+Extension.swift */; };
+		0DBE139F2CF431E300CF58F5 /* UIWindow+Extenion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBE139E2CF431E300CF58F5 /* UIWindow+Extenion.swift */; };
+		0DBE13A22CF4D1DE00CF58F5 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBE13A12CF4D1DE00CF58F5 /* UIView+Extension.swift */; };
+		0DBE13A42CF5355700CF58F5 /* UICodeControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBE13A32CF5355700CF58F5 /* UICodeControl.swift */; };
+		0DBE13A62CF5636A00CF58F5 /* ItemSelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBE13A52CF5636A00CF58F5 /* ItemSelectorView.swift */; };
+		0DBE13A82CF564D900CF58F5 /* HomeItemButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBE13A72CF564D900CF58F5 /* HomeItemButton.swift */; };
+		0DBE13AA2CF598C900CF58F5 /* VehiclesSalesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBE13A92CF598C900CF58F5 /* VehiclesSalesViewController.swift */; };
+		0DBE13AC2CF598EB00CF58F5 /* VehicleSalesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBE13AB2CF598EB00CF58F5 /* VehicleSalesView.swift */; };
 		0DE9B1AA2CCC58F50060B154 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE9B1A92CCC58F50060B154 /* AppDelegate.swift */; };
 		0DE9B1AC2CCC58F50060B154 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE9B1AB2CCC58F50060B154 /* SceneDelegate.swift */; };
 		0DE9B1B32CCC58F70060B154 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0DE9B1B22CCC58F70060B154 /* Assets.xcassets */; };
@@ -57,6 +64,13 @@
 		0D7B82002CE843BB0056F965 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		0D7B82042CEC0A520056F965 /* LoginDomain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginDomain.swift; sourceTree = "<group>"; };
 		0D7B82062CEF5F260056F965 /* UIButton+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
+		0DBE139E2CF431E300CF58F5 /* UIWindow+Extenion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIWindow+Extenion.swift"; sourceTree = "<group>"; };
+		0DBE13A12CF4D1DE00CF58F5 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		0DBE13A32CF5355700CF58F5 /* UICodeControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICodeControl.swift; sourceTree = "<group>"; };
+		0DBE13A52CF5636A00CF58F5 /* ItemSelectorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemSelectorView.swift; sourceTree = "<group>"; };
+		0DBE13A72CF564D900CF58F5 /* HomeItemButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeItemButton.swift; sourceTree = "<group>"; };
+		0DBE13A92CF598C900CF58F5 /* VehiclesSalesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehiclesSalesViewController.swift; sourceTree = "<group>"; };
+		0DBE13AB2CF598EB00CF58F5 /* VehicleSalesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleSalesView.swift; sourceTree = "<group>"; };
 		0DE9B1A62CCC58F50060B154 /* Sigma.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sigma.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DE9B1A92CCC58F50060B154 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0DE9B1AB2CCC58F50060B154 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -89,6 +103,7 @@
 			children = (
 				0D7B81E62CE7D2890056F965 /* Login */,
 				0D227AF22CF421D000C92CD8 /* Home */,
+				0DBE13A02CF4CEA300CF58F5 /* VehicleSales */,
 				0D067E892CD1AFB2006FA958 /* Client */,
 			);
 			path = Scenes;
@@ -115,8 +130,10 @@
 			isa = PBXGroup;
 			children = (
 				0D7B81E92CE7D3000056F965 /* UICodeViewController.swift */,
+				0DBE13A32CF5355700CF58F5 /* UICodeControl.swift */,
 				0D7B81EB2CE7D3D10056F965 /* UICodeView.swift */,
 				0D7B81EF2CE7D5670056F965 /* UIPaddingTextField.swift */,
+				0DBE13A52CF5636A00CF58F5 /* ItemSelectorView.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -128,6 +145,8 @@
 				0D7B81F12CE7DE890056F965 /* UIStackView+Extension.swift */,
 				0D7B82002CE843BB0056F965 /* String+Extension.swift */,
 				0D7B82062CEF5F260056F965 /* UIButton+Extension.swift */,
+				0DBE139E2CF431E300CF58F5 /* UIWindow+Extenion.swift */,
+				0DBE13A12CF4D1DE00CF58F5 /* UIView+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -135,6 +154,7 @@
 		0D227AF22CF421D000C92CD8 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				0DBE13A72CF564D900CF58F5 /* HomeItemButton.swift */,
 				0D227AF72CF42A5A00C92CD8 /* HomeOptionsView.swift */,
 				0D227AF52CF42A3500C92CD8 /* HomeOptionsViewController.swift */,
 				0D227AF32CF421E800C92CD8 /* HomeSplitViewController.swift */,
@@ -185,6 +205,15 @@
 				0D7B82042CEC0A520056F965 /* LoginDomain.swift */,
 			);
 			path = Domain;
+			sourceTree = "<group>";
+		};
+		0DBE13A02CF4CEA300CF58F5 /* VehicleSales */ = {
+			isa = PBXGroup;
+			children = (
+				0DBE13AB2CF598EB00CF58F5 /* VehicleSalesView.swift */,
+				0DBE13A92CF598C900CF58F5 /* VehiclesSalesViewController.swift */,
+			);
+			path = VehicleSales;
 			sourceTree = "<group>";
 		};
 		0DE9B19D2CCC58F50060B154 = {
@@ -313,8 +342,10 @@
 				0D7B81F92CE83A400056F965 /* CoreDataModel.swift in Sources */,
 				0D7B81F02CE7D5670056F965 /* UIPaddingTextField.swift in Sources */,
 				0D7B81F72CE835A70056F965 /* CoreDataModel.xcdatamodeld in Sources */,
+				0DBE13AA2CF598C900CF58F5 /* VehiclesSalesViewController.swift in Sources */,
 				0D227AF42CF421E800C92CD8 /* HomeSplitViewController.swift in Sources */,
 				0D7B81FF2CE83B890056F965 /* UserEntity.swift in Sources */,
+				0DBE139F2CF431E300CF58F5 /* UIWindow+Extenion.swift in Sources */,
 				0D7B82052CEC0A520056F965 /* LoginDomain.swift in Sources */,
 				0D067E912CD5950E006FA958 /* UITableView+Extension.swift in Sources */,
 				0D7B81EA2CE7D3000056F965 /* UICodeViewController.swift in Sources */,
@@ -322,7 +353,10 @@
 				0DE9B1CD2CD01AE20060B154 /* OrderModel.swift in Sources */,
 				0DE9B1C52CCFDEC00060B154 /* ClientModel.swift in Sources */,
 				0D7B81FB2CE83A800056F965 /* CoreDataStoring.swift in Sources */,
+				0DBE13AC2CF598EB00CF58F5 /* VehicleSalesView.swift in Sources */,
+				0DBE13A62CF5636A00CF58F5 /* ItemSelectorView.swift in Sources */,
 				0D7B81F22CE7DE890056F965 /* UIStackView+Extension.swift in Sources */,
+				0DBE13A82CF564D900CF58F5 /* HomeItemButton.swift in Sources */,
 				0D227AF62CF42A3500C92CD8 /* HomeOptionsViewController.swift in Sources */,
 				0D7B82012CE843BB0056F965 /* String+Extension.swift in Sources */,
 				0DE9B1CF2CD01B4A0060B154 /* ManufacturerModel.swift in Sources */,
@@ -330,7 +364,9 @@
 				0D067E8B2CD1AFCB006FA958 /* ClientsListViewController.swift in Sources */,
 				0DE9B1CB2CD017A70060B154 /* OperationModel.swift in Sources */,
 				0DE9B1C72CD015AC0060B154 /* SellerModel.swift in Sources */,
+				0DBE13A22CF4D1DE00CF58F5 /* UIView+Extension.swift in Sources */,
 				0D7B81EC2CE7D3D10056F965 /* UICodeView.swift in Sources */,
+				0DBE13A42CF5355700CF58F5 /* UICodeControl.swift in Sources */,
 				0D227AF82CF42A5A00C92CD8 /* HomeOptionsView.swift in Sources */,
 				0DE9B1C92CD0165D0060B154 /* VehicleModel.swift in Sources */,
 				0D7B82072CEF5F260056F965 /* UIButton+Extension.swift in Sources */,

@@ -6,17 +6,13 @@ final class HomeSplitViewController: UISplitViewController {
 
     let primaryController = HomeOptionsViewController()
 
-
-    let primaryNavigation = UINavigationController(rootViewController: UIViewController())
-
     // Lifecycle
 
     override func viewDidLoad() {
-        viewControllers = [primaryController]
-        preferredDisplayMode = .oneBesideSecondary
+        self.viewControllers = [primaryController]
+        self.preferredDisplayMode = .oneBesideSecondary
+        self.minimumPrimaryColumnWidth = 375
+        self.maximumPrimaryColumnWidth = 375
+        primaryController.rootView.salesItem.sendActions(for: .touchUpInside)
     }
-}
-
-extension HomeSplitViewController: UISplitViewControllerDelegate {
-
 }

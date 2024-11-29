@@ -12,6 +12,11 @@ extension UIStackView {
         return self
     }
 
+    public func setPadding(margins: UIEdgeInsets) {
+        layoutMargins = margins
+        isLayoutMarginsRelativeArrangement = true
+    }
+
     public convenience init(
         _ axis: NSLayoutConstraint.Axis,
         alignment: Alignment = .fill,

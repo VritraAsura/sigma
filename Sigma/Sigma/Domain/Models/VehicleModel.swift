@@ -1,6 +1,7 @@
 import Foundation
 
 struct VehicleModel: Decodable {
+    let imageData: Data
     let chassi: String
     let plate: String
     let brand: String

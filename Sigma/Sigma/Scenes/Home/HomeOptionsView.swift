@@ -6,8 +6,11 @@ final class HomeOptionsView: UICodeView {
 
     let selectorView = ItemSelectorView()
     let profileItem = HomeItemButton()
-    let salesItem = HomeItemButton()
+    let vehiclesItem = HomeItemButton()
+    let operationsItem = HomeItemButton()
+    let requestsItem = HomeItemButton()
     let partnersItem = HomeItemButton()
+    let logsItem = HomeItemButton()
 
     // Lifecycle
 
@@ -16,9 +19,11 @@ final class HomeOptionsView: UICodeView {
             selectorView
         )
         selectorView.items = [
-            profileItem,
-            salesItem,
-            partnersItem
+            vehiclesItem,
+            operationsItem,
+            requestsItem,
+            partnersItem,
+            logsItem
         ]
     }
 
@@ -37,11 +42,20 @@ final class HomeOptionsView: UICodeView {
         profileItem.style { s in
             s.titleLabel.text = "Perfil"
         }
-        salesItem.style { s in
-            s.titleLabel.text = "Vendas"
+        vehiclesItem.style { s in
+            s.titleLabel.text = "Veículos"
+        }
+        operationsItem.style { s in
+            s.titleLabel.text = "Operações"
+        }
+        requestsItem.style { s in
+            s.titleLabel.text = "Pedidos"
         }
         partnersItem.style { s in
             s.titleLabel.text = "Parceiros"
+        }
+        logsItem.style { s in
+            s.titleLabel.text = "Relatório"
         }
     }
 }

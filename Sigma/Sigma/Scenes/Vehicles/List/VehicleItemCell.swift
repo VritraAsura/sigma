@@ -44,7 +44,6 @@ final class VehicleItemCell: UICodeTableViewCell {
             s.backgroundColor = .systemGray
         }
         nameLabel.style { s in
-            s.textColor = .label
             s.font = .systemFont(ofSize: 24)
         }
         infosStack.style { s in

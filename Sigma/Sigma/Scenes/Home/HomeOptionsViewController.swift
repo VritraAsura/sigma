@@ -3,33 +3,43 @@ import UIKit
 
 final class HomeOptionsViewController: UICodeViewController<HomeOptionsView> {
 
-    lazy var profileNavigation = UINavigationController(rootViewController: profileController)
-    lazy var profileController = UIViewController()
-
-    lazy var salesNavigation = UINavigationController(rootViewController: salesController)
-    lazy var salesController = VehiclesSalesViewController()
-
-    lazy var partnersNavigation = UINavigationController(rootViewController: partnersController)
-    lazy var partnersController = UIViewController()
+    lazy var profileNavigation = UINavigationController(rootViewController: UIViewController())
+    lazy var vehiclesNavigation = UINavigationController(rootViewController: VehiclesViewController())
+    lazy var operationsNavigation = UINavigationController(rootViewController: OperationsViewController())
+    lazy var ordersNavigation = UINavigationController(rootViewController: OrdersViewController())
+    lazy var partnersNavigation = UINavigationController(rootViewController: PartnersViewController())
+    lazy var logsNavigation = UINavigationController(rootViewController: LogsViewController())
 
     override func viewDidLoad() {
         rootView.profileItem.addTarget(self, action: #selector(didTapProfile), for: .touchUpInside)
-        rootView.salesItem.addTarget(self, action: #selector(didTapSales), for: .touchUpInside)
+        rootView.vehiclesItem.addTarget(self, action: #selector(didTapSales), for: .touchUpInside)
+        rootView.operationsItem.addTarget(self, action: #selector(didTapOperations), for: .touchUpInside)
+        rootView.requestsItem.addTarget(self, action: #selector(didTapRequests), for: .touchUpInside)
         rootView.partnersItem.addTarget(self, action: #selector(didTapPartners), for: .touchUpInside)
+        rootView.logsItem.addTarget(self, action: #selector(didTapLogs), for: .touchUpInside)
     }
 
     @objc private func didTapProfile() {
-        profileController.view.backgroundColor = .systemBlue
         splitViewController?.showDetailViewController(profileNavigation, sender: nil)
     }
 
     @objc private func didTapSales() {
-        salesController.view.backgroundColor = .systemGreen
-        splitViewController?.showDetailViewController(salesNavigation, sender: nil)
+        splitViewController?.showDetailViewController(vehiclesNavigation, sender: nil)
+    }
+
+    @objc private func didTapOperations() {
+        splitViewController?.showDetailViewController(operationsNavigation, sender: nil)
+    }
+
+    @objc private func didTapRequests() {
+        splitViewController?.showDetailViewController(ordersNavigation, sender: nil)
     }
 
     @objc private func didTapPartners() {
-        partnersController.view.backgroundColor = .systemRed
         splitViewController?.showDetailViewController(partnersNavigation, sender: nil)
+    }
+
+    @objc private func didTapLogs() {
+        splitViewController?.showDetailViewController(logsNavigation, sender: nil)
     }
 }

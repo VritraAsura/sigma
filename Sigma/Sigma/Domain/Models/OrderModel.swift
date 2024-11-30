@@ -10,5 +10,5 @@ struct OrderModel: Decodable {
     let year: String
     let color: String
     let accessories: String
-    let price: String
+    let price: Decimal
 }

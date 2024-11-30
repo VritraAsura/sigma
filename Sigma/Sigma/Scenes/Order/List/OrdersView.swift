@@ -1,9 +1,7 @@
 import Stevia
 import UIKit
 
-final class VehicleSalesView: UICodeView {
-    // Views
-
+final class OrdersView: UICodeView {
     let tableView = UITableView()
 
     override func initSubviews() {

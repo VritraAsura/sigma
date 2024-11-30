@@ -1,13 +1,16 @@
-import Stevia
 import UIKit
+import Stevia
 
-final class VehiclesSalesViewController: UICodeViewController<VehicleSalesView> {
+final class OperationsViewController: UICodeViewController<OperationsView> {
 
-    var vehicles: [VehicleModel] = [
-        VehicleModel(imageData: Data(), chassi: "2178319783", plate: "ABC1234", brand: "Honda", model: "City", manufactureYear: "2017", modelYear: "2017", color: "Cinza", price: 70_000.00),
+    var operations: [OperationModel] = [
+        .purchaseMock,
+        .purchaseMock,
+        .purchaseMock,
+        .saleMock,
+        .saleMock,
+        .saleMock
     ]
-
-    // Lifecycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,39 +22,36 @@ final class VehiclesSalesViewController: UICodeViewController<VehicleSalesView> 
         rootView.tableView.deselectSelectedRow(animated: true)
     }
 
-    // Functions
-
     private func setupView() {
-        title = "Veículos disponíveis"
+        title = "Operações de compra e venda"
         rootView.tableView.dataSource = self
         rootView.tableView.delegate = self
         navigationItem.rightBarButtonItem = UIBarButtonItem(
             title: "Adicionar", style: .done,
-            target: self, action: #selector(newVehicleAction)
+            target: self, action: #selector(newOperationAction)
         )
     }
 
-    @objc private func newVehicleAction() {
-        let controller = VehicleRegisterViewController()
+    @objc private func newOperationAction() {
+        let controller = OperationRegisterViewController()
         navigationController?.pushViewController(controller, animated: true)
     }
 }
 
-extension VehiclesSalesViewController: UITableViewDataSource, UITableViewDelegate {
+extension OperationsViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return vehicles.count
+        return operations.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(VehicleItemCell.self)
-        let vehicle = vehicles[indexPath.row]
-        cell.update(model: vehicle)
+        let cell = tableView.dequeueReusableCell(OperationItemCell.self)
+        let operation = operations[indexPath.row]
+        cell.update(model: operation)
         return cell
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let controller = VehicleRegisterViewController()
-        controller.vehicle = vehicles[indexPath.row]
+        let controller = OperationRegisterViewController()
         navigationController?.pushViewController(controller, animated: true)
     }
 }

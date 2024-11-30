@@ -13,6 +13,6 @@ final class HomeSplitViewController: UISplitViewController {
         self.preferredDisplayMode = .oneBesideSecondary
         self.minimumPrimaryColumnWidth = 375
         self.maximumPrimaryColumnWidth = 375
-        primaryController.rootView.salesItem.sendActions(for: .touchUpInside)
+        primaryController.rootView.vehiclesItem.sendActions(for: .touchUpInside)
     }
 }

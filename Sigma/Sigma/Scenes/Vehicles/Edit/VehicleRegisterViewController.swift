@@ -57,6 +57,7 @@ final class VehicleRegisterViewController: UICodeViewController<VehicleRegisterV
     
     @objc private func saveVehicle() {
         print("Salvar")
+        navigationController?.popViewController(animated: true)
     }
 
     @objc private func deletionConfirmation() {

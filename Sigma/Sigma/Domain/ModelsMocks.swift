@@ -63,13 +63,14 @@ extension VehicleModel {
         VehicleModel(
             imageData: Data(),
             chassi: "D2392HWD9U0DJ1WS10",
-            plate: "RTX-4090",
             brand: "NVIDEA",
             model: "RTX 4090",
             manufactureYear: "2023",
             modelYear: "2024",
             color: "Verde",
-            price: 12_000
+            plate: "RTX-4090",
+            price: 12_000,
+            isAvailable: true
         )
     }
 }

@@ -4,7 +4,9 @@ import UIKit
 final class VehicleRegisterViewController: UICodeViewController<VehicleRegisterView> {
     // Properties
 
-    var vehicle: VehicleModel?
+    let vehicleDomain = VehicleDomain()
+
+    weak var vehicle: VehicleEntity?
 
     lazy var deletionAlert = UIOptionAlert(
         title: "Confirmar Exclusão",
@@ -57,6 +59,19 @@ final class VehicleRegisterViewController: UICodeViewController<VehicleRegisterV
     
     @objc private func saveVehicle() {
         print("Salvar")
+        vehicleDomain.addOrUpdateVehicle(
+            uri: vehicle?.objectID.uriRepresentation(),
+            imageData: rootView.vehicleImageView.image?.pngData() ?? Data(),
+            chassi: rootView.chassiTextField.string,
+            brand: rootView.brandTextField.string,
+            model: rootView.modelTextField.string,
+            manufactureYear: rootView.manufactureYearTextField.string,
+            modelYear: rootView.modelYearTextField.string,
+            color: rootView.colorTextField.string,
+            plate: rootView.plateTextField.string,
+            price: rootView.priceTextField.decimal,
+            isAvailable: vehicle?.isAvailable ?? true
+        )
         navigationController?.popViewController(animated: true)
     }
 
@@ -66,6 +81,9 @@ final class VehicleRegisterViewController: UICodeViewController<VehicleRegisterV
 
     private func deleteVehicle() {
         print("Excluir")
+        if let vehicle = vehicle {
+            vehicleDomain.deleteVehicle(vehicle)
+        }
         navigationController?.popViewController(animated: true)
     }
 }

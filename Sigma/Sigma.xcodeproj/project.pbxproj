@@ -62,6 +62,12 @@
 		0DBE13F62CFBB8EC00CF58F5 /* LogsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBE13F52CFBB8EC00CF58F5 /* LogsViewController.swift */; };
 		0DBE13F82CFBB91300CF58F5 /* LogItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBE13F72CFBB91300CF58F5 /* LogItemCell.swift */; };
 		0DBE13FA2CFBB96900CF58F5 /* ModelsMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBE13F92CFBB96900CF58F5 /* ModelsMocks.swift */; };
+		0DBE13FC2CFBE30B00CF58F5 /* VehicleEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBE13FB2CFBE30B00CF58F5 /* VehicleEntity.swift */; };
+		0DBE13FE2CFCDA6400CF58F5 /* OperationDomain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBE13FD2CFCDA6400CF58F5 /* OperationDomain.swift */; };
+		0DBE14002CFCDBBA00CF58F5 /* OperationEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBE13FF2CFCDBBA00CF58F5 /* OperationEntity.swift */; };
+		0DBE14022CFCE43900CF58F5 /* ClientEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBE14012CFCE43900CF58F5 /* ClientEntity.swift */; };
+		0DBE14042CFCE45000CF58F5 /* SellerEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBE14032CFCE45000CF58F5 /* SellerEntity.swift */; };
+		0DBE14062CFCE46C00CF58F5 /* FinanceEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBE14052CFCE46C00CF58F5 /* FinanceEntity.swift */; };
 		0DE9B1AA2CCC58F50060B154 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE9B1A92CCC58F50060B154 /* AppDelegate.swift */; };
 		0DE9B1AC2CCC58F50060B154 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE9B1AB2CCC58F50060B154 /* SceneDelegate.swift */; };
 		0DE9B1B32CCC58F70060B154 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0DE9B1B22CCC58F70060B154 /* Assets.xcassets */; };
@@ -131,6 +137,12 @@
 		0DBE13F52CFBB8EC00CF58F5 /* LogsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogsViewController.swift; sourceTree = "<group>"; };
 		0DBE13F72CFBB91300CF58F5 /* LogItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogItemCell.swift; sourceTree = "<group>"; };
 		0DBE13F92CFBB96900CF58F5 /* ModelsMocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelsMocks.swift; sourceTree = "<group>"; };
+		0DBE13FB2CFBE30B00CF58F5 /* VehicleEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleEntity.swift; sourceTree = "<group>"; };
+		0DBE13FD2CFCDA6400CF58F5 /* OperationDomain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperationDomain.swift; sourceTree = "<group>"; };
+		0DBE13FF2CFCDBBA00CF58F5 /* OperationEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperationEntity.swift; sourceTree = "<group>"; };
+		0DBE14012CFCE43900CF58F5 /* ClientEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientEntity.swift; sourceTree = "<group>"; };
+		0DBE14032CFCE45000CF58F5 /* SellerEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SellerEntity.swift; sourceTree = "<group>"; };
+		0DBE14052CFCE46C00CF58F5 /* FinanceEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinanceEntity.swift; sourceTree = "<group>"; };
 		0DE9B1A62CCC58F50060B154 /* Sigma.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sigma.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DE9B1A92CCC58F50060B154 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0DE9B1AB2CCC58F50060B154 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -262,7 +274,12 @@
 		0D7B81FD2CE83B5E0056F965 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				0DBE14012CFCE43900CF58F5 /* ClientEntity.swift */,
+				0DBE14052CFCE46C00CF58F5 /* FinanceEntity.swift */,
+				0DBE13FF2CFCDBBA00CF58F5 /* OperationEntity.swift */,
+				0DBE14032CFCE45000CF58F5 /* SellerEntity.swift */,
 				0D7B81FE2CE83B890056F965 /* UserEntity.swift */,
+				0DBE13FB2CFBE30B00CF58F5 /* VehicleEntity.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -310,6 +327,7 @@
 			children = (
 				0D7B82042CEC0A520056F965 /* LoginDomain.swift */,
 				0DBE13C32CF9F6CB00CF58F5 /* VehicleDomain.swift */,
+				0DBE13FD2CFCDA6400CF58F5 /* OperationDomain.swift */,
 			);
 			path = Domains;
 			sourceTree = "<group>";
@@ -564,11 +582,13 @@
 				0D7B81EA2CE7D3000056F965 /* UICodeViewController.swift in Sources */,
 				0D7B81EE2CE7D4820056F965 /* LoginView.swift in Sources */,
 				0DE9B1CD2CD01AE20060B154 /* OrderModel.swift in Sources */,
+				0DBE14062CFCE46C00CF58F5 /* FinanceEntity.swift in Sources */,
 				0DE9B1C52CCFDEC00060B154 /* ClientModel.swift in Sources */,
 				0D7B81FB2CE83A800056F965 /* CoreDataStoring.swift in Sources */,
 				0DBE13D72CFBA04F00CF58F5 /* OrderItemCell.swift in Sources */,
 				0DBE13AC2CF598EB00CF58F5 /* VehiclesView.swift in Sources */,
 				0DBE13A62CF5636A00CF58F5 /* ItemSelectorView.swift in Sources */,
+				0DBE13FE2CFCDA6400CF58F5 /* OperationDomain.swift in Sources */,
 				0DBE13B72CF82B3700CF58F5 /* VehicleRegisterViewController.swift in Sources */,
 				0D7B81F22CE7DE890056F965 /* UIStackView+Extension.swift in Sources */,
 				0DBE13BF2CF8FD3A00CF58F5 /* UIOptionAlert.swift in Sources */,
@@ -583,9 +603,12 @@
 				0D7B82012CE843BB0056F965 /* String+Extension.swift in Sources */,
 				0DBE13F02CFBB87300CF58F5 /* LogDetailsView.swift in Sources */,
 				0DBE13F22CFBB89600CF58F5 /* LogDetailsViewController.swift in Sources */,
+				0DBE13FC2CFBE30B00CF58F5 /* VehicleEntity.swift in Sources */,
 				0DBE13E52CFBB5CC00CF58F5 /* PartnerItemCell.swift in Sources */,
 				0DE9B1CF2CD01B4A0060B154 /* ManufacturerModel.swift in Sources */,
+				0DBE14022CFCE43900CF58F5 /* ClientEntity.swift in Sources */,
 				0DE9B1AA2CCC58F50060B154 /* AppDelegate.swift in Sources */,
+				0DBE14002CFCDBBA00CF58F5 /* OperationEntity.swift in Sources */,
 				0D067E8B2CD1AFCB006FA958 /* OperationsViewController.swift in Sources */,
 				0DBE13D52CFBA01700CF58F5 /* OrdersViewController.swift in Sources */,
 				0DE9B1CB2CD017A70060B154 /* OperationModel.swift in Sources */,
@@ -601,6 +624,7 @@
 				0DE9B1C92CD0165D0060B154 /* VehicleModel.swift in Sources */,
 				0D7B82072CEF5F260056F965 /* UIButton+Extension.swift in Sources */,
 				0DBE13E32CFBB59D00CF58F5 /* PartnersView.swift in Sources */,
+				0DBE14042CFCE45000CF58F5 /* SellerEntity.swift in Sources */,
 				0DE9B1AC2CCC58F50060B154 /* SceneDelegate.swift in Sources */,
 				0DBE13AE2CF5FDCC00CF58F5 /* VehicleItemCell.swift in Sources */,
 			);

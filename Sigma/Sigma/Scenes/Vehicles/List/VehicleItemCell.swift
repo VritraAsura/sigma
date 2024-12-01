@@ -41,6 +41,8 @@ final class VehicleItemCell: UICodeTableViewCell {
             s.backgroundColor = .clear
         }
         vehicleImageView.style { s in
+            s.clipsToBounds = true
+            s.contentMode = .scaleAspectFill
             s.backgroundColor = .systemGray
         }
         nameLabel.style { s in
@@ -53,13 +55,13 @@ final class VehicleItemCell: UICodeTableViewCell {
 
     // Functions
 
-    func update(model: VehicleModel) {
+    func update(model: VehicleEntity) {
         vehicleImageView.image = UIImage(data: model.imageData)
         nameLabel.text = "\(model.brand) \(model.model)"
         yearLabel.text = "Ano: \(model.manufactureYear) \(model.modelYear)"
         plateLabel.text = "Placa: \(model.plate)"
         colorLabel.text = "Cor: \(model.color)"
-        priceLabel.text = "Preço: \(model.price.brlFormatted)"
+        priceLabel.text = "Preço: \(model.price.decimalValue.brlFormatted)"
         chassiLabel.text = "Chassi: \(model.chassi)"
     }
 }

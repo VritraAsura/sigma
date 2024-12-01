@@ -19,11 +19,12 @@ final class HomeOptionsView: UICodeView {
             selectorView
         )
         selectorView.items = [
+//            profileItem,
             vehiclesItem,
             operationsItem,
             requestsItem,
             partnersItem,
-            logsItem
+//            logsItem
         ]
     }
 

@@ -2,17 +2,10 @@ import Stevia
 import UIKit
 
 final class VehiclesViewController: UICodeViewController<VehiclesView> {
+    // Properties
 
-    var vehicles: [VehicleModel] = [
-        .mock,
-        .mock,
-        .mock,
-        .mock,
-        .mock,
-        .mock,
-        .mock,
-        .mock
-    ]
+    let vehicleDomain = VehicleDomain()
+    var vehicles: [VehicleEntity] = []
 
     // Lifecycle
 
@@ -23,7 +16,9 @@ final class VehiclesViewController: UICodeViewController<VehiclesView> {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        vehicles = vehicleDomain.getVehicles()
         rootView.tableView.deselectSelectedRow(animated: true)
+        rootView.tableView.reloadData()
     }
 
     // Functions
@@ -43,6 +38,8 @@ final class VehiclesViewController: UICodeViewController<VehiclesView> {
         navigationController?.pushViewController(controller, animated: true)
     }
 }
+
+// MARK: - Table View Handling
 
 extension VehiclesViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

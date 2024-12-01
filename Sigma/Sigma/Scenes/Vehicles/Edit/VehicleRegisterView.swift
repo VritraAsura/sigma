@@ -75,14 +75,14 @@ final class VehicleRegisterView: UICodeView {
 
     // Functions
 
-    func loadVehicle(_ vehicle: VehicleModel) {
+    func loadVehicle(_ vehicle: VehicleEntity) {
         vehicleImageView.image = UIImage(data: vehicle.imageData)
         brandTextField.text = vehicle.brand
         modelTextField.text = vehicle.model
         manufactureYearTextField.text = vehicle.manufactureYear
         modelYearTextField.text = vehicle.modelYear
         colorTextField.text = vehicle.color
-        priceTextField.decimal = vehicle.price
+        priceTextField.decimal = vehicle.price.decimalValue
         plateTextField.text = vehicle.plate
         chassiTextField.text = vehicle.chassi
     }

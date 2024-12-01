@@ -5,7 +5,7 @@ import CoreData
 public protocol CoreDataStoring {
     var persistentContainer: NSPersistentContainer { get }
 
-    func getEntity<T: NSManagedObject>(_ type: T.Type, at uri: URL?) throws -> T
+    func getEntity<T: NSManagedObject>(_ type: T.Type, at uri: URL) throws -> T
     func getEntities<T: NSManagedObject>(_ type: T.Type) throws -> [T]
     func getEntities<T: NSManagedObject>(_ type: T.Type, predicate: NSPredicate) throws -> [T]
     func newEntity<T: NSManagedObject>(_ type: T.Type) throws -> T
@@ -15,10 +15,10 @@ public protocol CoreDataStoring {
 }
 
 extension CoreDataStoring {
-    public func getEntity<T: NSManagedObject>(_ type: T.Type, at uri: URL?) throws -> T {
+    public func getEntity<T: NSManagedObject>(_ type: T.Type, at uri: URL) throws -> T {
         let coordinator = persistentContainer.persistentStoreCoordinator
         let context = persistentContainer.viewContext
-        guard let uri = uri, let objectID = coordinator.managedObjectID(forURIRepresentation: uri),
+        guard let objectID = coordinator.managedObjectID(forURIRepresentation: uri),
               let entity = context.object(with: objectID) as? T
         else { throw CoreDataError.error }
         return entity
@@ -43,7 +43,7 @@ extension CoreDataStoring {
         guard let entityDescription = NSEntityDescription.entity(forEntityName: type.entityName, in: context)
         else { throw CoreDataError.error }
 
-        return T(entity: entityDescription, insertInto: nil)
+        return T(entity: entityDescription, insertInto: context)
     }
 
     public func insert(object: NSManagedObject) throws {

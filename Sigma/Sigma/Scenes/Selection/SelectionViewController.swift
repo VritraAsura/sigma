@@ -4,7 +4,7 @@ import UIKit
 final class SelectionViewController: UICodeViewController<SelectionView> {
 
     enum SelectionType {
-        case client, seller, vehicle
+        case client, seller, manufacturer, vehicle
     }
 
     var type: SelectionType = .client
@@ -20,13 +20,6 @@ final class SelectionViewController: UICodeViewController<SelectionView> {
         setupView()
     }
 
-//    override func viewWillAppear(_ animated: Bool) {
-//        super.viewWillAppear(animated)
-//
-//        rootView.tableView.deselectSelectedRow(animated: true)
-//        rootView.tableView.reloadData()
-//    }
-
     private func setupView() {
         title = "Selecionar Entidade"
         rootView.searchBar.delegate = self
@@ -39,6 +32,9 @@ final class SelectionViewController: UICodeViewController<SelectionView> {
             selectionList = list
         case .seller:
             let list: [SellerEntity] = domain.getEntities()
+            selectionList = list
+        case .manufacturer:
+            let list: [ManufacturerEntity] = domain.getEntities()
             selectionList = list
         case .vehicle:
             let list: [VehicleEntity] = domain.getEntities()
@@ -56,11 +52,7 @@ extension SelectionViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let model = filteredList[indexPath.row]
         switch type {
-        case .client:
-            let cell = tableView.dequeueReusableCell(PartnerItemCell.self)
-            cell.update(model: model)
-            return cell
-        case .seller:
+        case .client, .seller, .manufacturer:
             let cell = tableView.dequeueReusableCell(PartnerItemCell.self)
             cell.update(model: model)
             return cell
@@ -91,6 +83,10 @@ extension SelectionViewController: UISearchBarDelegate {
             case .seller:
                 filteredList = selectionList.filter {
                     ($0 as? SellerEntity)?.name.lowercased().contains(searchText.lowercased()) ?? false
+                }
+            case .manufacturer:
+                filteredList = selectionList.filter {
+                    ($0 as? ManufacturerEntity)?.name.lowercased().contains(searchText.lowercased()) ?? false
                 }
             case .vehicle:
                 filteredList = selectionList.filter { s in

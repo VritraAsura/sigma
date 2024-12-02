@@ -43,6 +43,10 @@ final class OperationRegisterViewController: UICodeViewController<OperationRegis
             navigationItem.rightBarButtonItems = [deleteButton, saveButton]
         }
 
+        client = operation?.client
+        seller = operation?.seller
+        vehicle = operation?.vehicle
+
         rootView.clientView.setAction { [weak self] in self?.selectClient() }
         rootView.sellerView.setAction { [weak self] in self?.selectSeller() }
         rootView.vehicleView.setAction { [weak self] in self?.selectVehicle() }

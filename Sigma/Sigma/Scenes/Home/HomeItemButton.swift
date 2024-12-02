@@ -26,7 +26,7 @@ final class HomeItemButton: UICodeControl, SelectableItemProtocol {
             s.layer.borderColor = UIColor.black.cgColor
         }
         iconView.style { s in
-            s.backgroundColor = .blue
+//            s.backgroundColor = .blue
         }
         titleLabel.style { s in
             s.text = "Venda"

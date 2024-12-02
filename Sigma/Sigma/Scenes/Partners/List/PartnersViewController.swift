@@ -35,8 +35,6 @@ final class PartnersViewController: UICodeViewController<PartnersView> {
         setupView()
     }
 
-    var client: ClientEntity?
-
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 

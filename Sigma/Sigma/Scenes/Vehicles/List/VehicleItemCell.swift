@@ -4,6 +4,25 @@ import UIKit
 final class VehicleItemCell: UICodeTableViewCell {
     // Views
 
+    let itemView = VehicleItemView()
+
+    // Lifecycle
+
+    override func initSubviews() {
+        contentView.subviews(itemView)
+        itemView.fillContainer()
+    }
+
+    // Functions
+
+    func update(model: VehicleEntity) {
+        itemView.update(model: model)
+    }
+}
+
+final class VehicleItemView: UICodeView {
+    // Views
+
     let vehicleImageView = UIImageView()
 
     let infosStack = UIStackView(.vertical)
@@ -17,7 +36,7 @@ final class VehicleItemCell: UICodeTableViewCell {
     // Lifecycle
 
     override func initSubviews() {
-        contentView.subviews(
+        subviews(
             vehicleImageView,
             infosStack.addArrangedSubviews(
                 nameLabel,
@@ -37,7 +56,7 @@ final class VehicleItemCell: UICodeTableViewCell {
     }
 
     override func initStyle() {
-        contentView.style { s in
+        style { s in
             s.backgroundColor = .clear
         }
         vehicleImageView.style { s in

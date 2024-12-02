@@ -66,6 +66,8 @@
 		0DBE140C2CFD179500CF58F5 /* ManufacturerEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBE140B2CFD179500CF58F5 /* ManufacturerEntity.swift */; };
 		0DBE14102CFD595400CF58F5 /* CoreDataDomain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBE140F2CFD595400CF58F5 /* CoreDataDomain.swift */; };
 		0DBE14122CFD8D3300CF58F5 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBE14112CFD8D3300CF58F5 /* UIViewController+Extension.swift */; };
+		0DBE14152CFE421C00CF58F5 /* SelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBE14142CFE421C00CF58F5 /* SelectionView.swift */; };
+		0DBE14172CFE424400CF58F5 /* SelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBE14162CFE424400CF58F5 /* SelectionViewController.swift */; };
 		0DE9B1AA2CCC58F50060B154 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE9B1A92CCC58F50060B154 /* AppDelegate.swift */; };
 		0DE9B1AC2CCC58F50060B154 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE9B1AB2CCC58F50060B154 /* SceneDelegate.swift */; };
 		0DE9B1B32CCC58F70060B154 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0DE9B1B22CCC58F70060B154 /* Assets.xcassets */; };
@@ -133,6 +135,8 @@
 		0DBE140B2CFD179500CF58F5 /* ManufacturerEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManufacturerEntity.swift; sourceTree = "<group>"; };
 		0DBE140F2CFD595400CF58F5 /* CoreDataDomain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataDomain.swift; sourceTree = "<group>"; };
 		0DBE14112CFD8D3300CF58F5 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		0DBE14142CFE421C00CF58F5 /* SelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionView.swift; sourceTree = "<group>"; };
+		0DBE14162CFE424400CF58F5 /* SelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionViewController.swift; sourceTree = "<group>"; };
 		0DE9B1A62CCC58F50060B154 /* Sigma.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sigma.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DE9B1A92CCC58F50060B154 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0DE9B1AB2CCC58F50060B154 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -160,6 +164,7 @@
 				0D7B81E62CE7D2890056F965 /* Login */,
 				0D227AF22CF421D000C92CD8 /* Home */,
 				0DBE13A02CF4CEA300CF58F5 /* Vehicles */,
+				0DBE14132CFE41FC00CF58F5 /* Selection */,
 				0D067E892CD1AFB2006FA958 /* Operations */,
 				0DBE13CF2CFB9F9100CF58F5 /* Order */,
 				0DBE13DD2CFBB33A00CF58F5 /* Partners */,
@@ -402,6 +407,15 @@
 			path = List;
 			sourceTree = "<group>";
 		};
+		0DBE14132CFE41FC00CF58F5 /* Selection */ = {
+			isa = PBXGroup;
+			children = (
+				0DBE14142CFE421C00CF58F5 /* SelectionView.swift */,
+				0DBE14162CFE424400CF58F5 /* SelectionViewController.swift */,
+			);
+			path = Selection;
+			sourceTree = "<group>";
+		};
 		0DE9B19D2CCC58F50060B154 = {
 			isa = PBXGroup;
 			children = (
@@ -523,6 +537,7 @@
 				0D227AF42CF421E800C92CD8 /* HomeSplitViewController.swift in Sources */,
 				0D7B81FF2CE83B890056F965 /* UserEntity.swift in Sources */,
 				0DBE139F2CF431E300CF58F5 /* UIWindow+Extenion.swift in Sources */,
+				0DBE14172CFE424400CF58F5 /* SelectionViewController.swift in Sources */,
 				0DBE13E72CFBB5FF00CF58F5 /* PartnerRegisterViewController.swift in Sources */,
 				0DBE13F42CFBB8C900CF58F5 /* LogsView.swift in Sources */,
 				0DBE13B92CF8351200CF58F5 /* UIDecimalField.swift in Sources */,
@@ -533,6 +548,7 @@
 				0D7B81EA2CE7D3000056F965 /* UICodeViewController.swift in Sources */,
 				0D7B81EE2CE7D4820056F965 /* LoginView.swift in Sources */,
 				0D7B81FB2CE83A800056F965 /* CoreDataStoring.swift in Sources */,
+				0DBE14152CFE421C00CF58F5 /* SelectionView.swift in Sources */,
 				0DBE13D72CFBA04F00CF58F5 /* OrderItemCell.swift in Sources */,
 				0DBE13AC2CF598EB00CF58F5 /* VehiclesView.swift in Sources */,
 				0DBE13A62CF5636A00CF58F5 /* ItemSelectorView.swift in Sources */,

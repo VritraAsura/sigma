@@ -14,6 +14,8 @@ final class OperationsViewController: UICodeViewController<OperationsView> {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         rootView.tableView.deselectSelectedRow(animated: true)
+        operations = domain.getEntities()
+        rootView.tableView.reloadData()
     }
 
     private func setupView() {
@@ -28,15 +30,16 @@ final class OperationsViewController: UICodeViewController<OperationsView> {
             title: "Nova Venda", style: .done,
             target: self, action: #selector(newSaleAction)
         )
-        navigationItem.rightBarButtonItems = [newSale, newPurchase]
+        navigationItem.rightBarButtonItems = [newPurchase, newSale]
     }
 
-    @objc private func newPurchaseAction() {
+    @objc private func newSaleAction() {
         let controller = OperationRegisterViewController()
         controller.operationType = 0
         navigationController?.pushViewController(controller, animated: true)
     }
-    @objc private func newSaleAction() {
+
+    @objc private func newPurchaseAction() {
         let controller = OperationRegisterViewController()
         controller.operationType = 1
         navigationController?.pushViewController(controller, animated: true)

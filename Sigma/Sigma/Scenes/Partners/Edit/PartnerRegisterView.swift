@@ -48,14 +48,6 @@ final class PartnerRegisterView: UICodeView {
             s.axis = .vertical
             s.spacing = 24
         }
-//        homePhoneTextField.style { s in
-//            s.numberStyle = .none
-//            s.fractionDigits = 0
-//        }
-//        cellphoneTextField.style { s in
-//            s.numberStyle = .none
-//            s.fractionDigits = 0
-//        }
         incomeTextField.style { s in
             s.numberStyle = .currency
         }

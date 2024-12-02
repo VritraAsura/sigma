@@ -4,6 +4,25 @@ import UIKit
 final class PartnerItemCell: UICodeTableViewCell {
     // Views
 
+    let itemView = PartnerItemView()
+
+    // Lifecycle
+
+    override func initSubviews() {
+        contentView.subviews(itemView)
+        itemView.fillContainer()
+    }
+
+    // Functions
+
+    func update(model: NSManagedObject) {
+        itemView.update(model: model)
+    }
+}
+
+final class PartnerItemView: UICodeView {
+    // Views
+
     let infosStack = UIStackView(.vertical)
     let nameLabel = UILabel()
     let codeLabel = UILabel()
@@ -11,7 +30,7 @@ final class PartnerItemCell: UICodeTableViewCell {
     // Lifecycle
 
     override func initSubviews() {
-        contentView.subviews(
+        subviews(
             infosStack.addArrangedSubviews(
                 nameLabel,
                 codeLabel

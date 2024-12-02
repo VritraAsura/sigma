@@ -5,14 +5,16 @@ final class PartnerItemCell: UICodeTableViewCell {
     // Views
 
     let infosStack = UIStackView(.vertical)
-    let typeLabel = UILabel()
+    let nameLabel = UILabel()
+    let codeLabel = UILabel()
 
     // Lifecycle
 
     override func initSubviews() {
         contentView.subviews(
             infosStack.addArrangedSubviews(
-                typeLabel
+                nameLabel,
+                codeLabel
             )
         )
     }
@@ -22,21 +24,26 @@ final class PartnerItemCell: UICodeTableViewCell {
     }
 
     override func initStyle() {
-        typeLabel.style { s in
+        nameLabel.style { s in
             s.font = .systemFont(ofSize: 24)
+        }
+        codeLabel.style { s in
+            s.font = .systemFont(ofSize: 16)
         }
     }
 
     // Functions
 
-    func update(model: PartnerModel) {
-        switch model {
-        case .client:
-            typeLabel.text = "Cliente"
-        case .seller:
-            typeLabel.text = "Vendedor"
-        case .manufacturer:
-            typeLabel.text = "Montadora"
+    func update(model: NSManagedObject) {
+        if let model = model as? ClientEntity {
+            nameLabel.text = model.name
+            codeLabel.text = model.cpf
+        } else if let model = model as? SellerEntity {
+            nameLabel.text = model.name
+            codeLabel.text = model.code
+        } else if let model = model as? ManufacturerEntity {
+            nameLabel.text = model.name
+            codeLabel.text = model.cnpj
         }
     }
 }

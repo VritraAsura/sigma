@@ -29,7 +29,7 @@ final class OrderItemCell: UICodeTableViewCell {
 
     // Functions
 
-    func update(model: OrderModel) {
-        modelLabel.text = model.model
-    }
+//    func update(model: OrderModel) {
+//        modelLabel.text = model.model
+//    }
 }

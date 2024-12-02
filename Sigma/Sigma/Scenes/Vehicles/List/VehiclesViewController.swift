@@ -4,7 +4,7 @@ import UIKit
 final class VehiclesViewController: UICodeViewController<VehiclesView> {
     // Properties
 
-    let vehicleDomain = VehicleDomain()
+    let domain = CoreDataDomain()
     var vehicles: [VehicleEntity] = []
 
     // Lifecycle
@@ -16,7 +16,7 @@ final class VehiclesViewController: UICodeViewController<VehiclesView> {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        vehicles = vehicleDomain.getVehicles()
+        vehicles = domain.getEntities()
         rootView.tableView.deselectSelectedRow(animated: true)
         rootView.tableView.reloadData()
     }

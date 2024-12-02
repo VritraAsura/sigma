@@ -1,24 +1,55 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="21513" systemVersion="21H1320" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="ClientEntity" representedClassName=".ClientEntity" syncable="YES"/>
-    <entity name="FinanceEntity" representedClassName=".FinanceEntity" syncable="YES">
-        <attribute name="entryAmount" optional="YES" attributeType="Decimal" defaultValueString="0.0"/>
-        <attribute name="financedAmount" optional="YES" attributeType="Decimal" defaultValueString="0.0"/>
-        <relationship name="operation" maxCount="1" deletionRule="Nullify" destinationEntity="OperationEntity" inverseName="finance" inverseEntity="OperationEntity"/>
+    <entity name="ClientEntity" representedClassName=".ClientEntity" syncable="YES">
+        <attribute name="cellphone" attributeType="String"/>
+        <attribute name="city" attributeType="String"/>
+        <attribute name="cpf" attributeType="String"/>
+        <attribute name="homePhone" optional="YES" attributeType="String"/>
+        <attribute name="income" attributeType="Decimal" defaultValueString="0.0"/>
+        <attribute name="name" attributeType="String"/>
+        <attribute name="neighborhood" attributeType="String"/>
+        <attribute name="state" attributeType="String"/>
+        <relationship name="operations" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="OperationEntity" inverseName="client" inverseEntity="OperationEntity"/>
+        <relationship name="orders" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="OrderEntity" inverseName="client" inverseEntity="OrderEntity"/>
+    </entity>
+    <entity name="ManufacturerEntity" representedClassName=".ManufacturerEntity" syncable="YES">
+        <attribute name="brand" attributeType="String"/>
+        <attribute name="cellphone" attributeType="String"/>
+        <attribute name="cnpj" attributeType="String"/>
+        <attribute name="comertialPhone" attributeType="String"/>
+        <attribute name="email" attributeType="String"/>
+        <attribute name="name" attributeType="String"/>
+        <relationship name="orders" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="OrderEntity" inverseName="manufacturer" inverseEntity="OrderEntity"/>
     </entity>
     <entity name="OperationEntity" representedClassName=".OperationEntity" syncable="YES">
         <attribute name="date" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="entryAmount" optional="YES" attributeType="Decimal" defaultValueString="0.0"/>
+        <attribute name="financedAmount" optional="YES" attributeType="Decimal" defaultValueString="0.0"/>
         <attribute name="totalPrice" attributeType="Decimal" defaultValueString="0.0"/>
         <attribute name="type" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
-        <relationship name="cliente" maxCount="1" deletionRule="Nullify" destinationEntity="ClientEntity"/>
-        <relationship name="finance" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="FinanceEntity" inverseName="operation" inverseEntity="FinanceEntity"/>
-        <relationship name="seller" maxCount="1" deletionRule="Nullify" destinationEntity="SellerEntity"/>
-        <relationship name="vehicle" maxCount="1" deletionRule="Nullify" destinationEntity="VehicleEntity"/>
+        <relationship name="client" maxCount="1" deletionRule="Nullify" destinationEntity="ClientEntity" inverseName="operations" inverseEntity="ClientEntity"/>
+        <relationship name="seller" maxCount="1" deletionRule="Nullify" destinationEntity="SellerEntity" inverseName="operations" inverseEntity="SellerEntity"/>
+        <relationship name="vehicle" maxCount="1" deletionRule="Nullify" destinationEntity="VehicleEntity" inverseName="operation" inverseEntity="VehicleEntity"/>
     </entity>
-    <entity name="SellerEntity" representedClassName=".SellerEntity" syncable="YES"/>
+    <entity name="OrderEntity" representedClassName=".OrderEntity" syncable="YES">
+        <attribute name="accessories" attributeType="String"/>
+        <attribute name="color" attributeType="String"/>
+        <attribute name="date" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="model" attributeType="String"/>
+        <attribute name="price" optional="YES" attributeType="Decimal" defaultValueString="0.0"/>
+        <attribute name="year" attributeType="String"/>
+        <relationship name="client" maxCount="1" deletionRule="Nullify" destinationEntity="ClientEntity" inverseName="orders" inverseEntity="ClientEntity"/>
+        <relationship name="manufacturer" maxCount="1" deletionRule="Nullify" destinationEntity="ManufacturerEntity" inverseName="orders" inverseEntity="ManufacturerEntity"/>
+        <relationship name="seller" maxCount="1" deletionRule="Nullify" destinationEntity="SellerEntity" inverseName="orders" inverseEntity="SellerEntity"/>
+    </entity>
+    <entity name="SellerEntity" representedClassName=".SellerEntity" syncable="YES">
+        <attribute name="code" attributeType="String"/>
+        <attribute name="name" attributeType="String"/>
+        <relationship name="operations" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="OperationEntity" inverseName="seller" inverseEntity="OperationEntity"/>
+        <relationship name="orders" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="OrderEntity" inverseName="seller" inverseEntity="OrderEntity"/>
+    </entity>
     <entity name="UserEntity" representedClassName=".UserEntity" syncable="YES">
         <attribute name="password" attributeType="String"/>
-        <attribute name="type" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="username" attributeType="String"/>
     </entity>
     <entity name="VehicleEntity" representedClassName=".VehicleEntity" syncable="YES">
@@ -32,5 +63,6 @@
         <attribute name="modelYear" attributeType="String"/>
         <attribute name="plate" attributeType="String"/>
         <attribute name="price" attributeType="Decimal" defaultValueString="0.0"/>
+        <relationship name="operation" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="OperationEntity" inverseName="vehicle" inverseEntity="OperationEntity"/>
     </entity>
 </model>

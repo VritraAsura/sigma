@@ -3,16 +3,6 @@ import UIKit
 
 final class OrdersViewController: UICodeViewController<OrdersView> {
 
-    var orders: [OrderModel] = [
-        .mock,
-        .mock,
-        .mock,
-        .mock,
-        .mock,
-        .mock,
-        .mock,
-    ]
-
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
@@ -41,13 +31,13 @@ final class OrdersViewController: UICodeViewController<OrdersView> {
 
 extension OrdersViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return orders.count
+        return 0
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(OrderItemCell.self)
-        let order = orders[indexPath.row]
-        cell.update(model: order)
+//        let order = orders[indexPath.row]
+//        cell.update(model: order)
         return cell
     }
 

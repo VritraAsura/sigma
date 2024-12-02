@@ -12,4 +12,6 @@ public class VehicleEntity: NSManagedObject {
     @NSManaged public var plate: String
     @NSManaged public var price: NSDecimalNumber
     @NSManaged public var isAvailable: Bool
+
+    @NSManaged public var operation: OperationEntity?
 }

@@ -12,9 +12,26 @@ extension UIStackView {
         return self
     }
 
+    public func setPadding(top: CGFloat, left: CGFloat, bottom: CGFloat, right: CGFloat) {
+        let padding = UIEdgeInsets(top: top, left: left, bottom: bottom, right: right)
+        setPadding(margins: padding)
+    }
+
     public func setPadding(margins: UIEdgeInsets) {
         layoutMargins = margins
         isLayoutMarginsRelativeArrangement = true
+    }
+
+    @discardableResult
+    public func removeAllArrangedSubviews() -> [UIView] {
+        arrangedSubviews.reduce([UIView](), { $0 + [dropArrangedSubview($1)] })
+    }
+
+    @discardableResult
+    public func dropArrangedSubview(_ view: UIView) -> UIView {
+        removeArrangedSubview(view)
+        view.removeFromSuperview()
+        return view
     }
 
     public convenience init(

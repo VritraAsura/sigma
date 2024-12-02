@@ -39,10 +39,10 @@ final class LoginView: UICodeView {
     }
 
     override func initLayout() {
-        logoView.top(0).bottom(0).leading(0).Trailing == CenterX
+        logoView.top(0).bottom(0).leading(0).width(40%)
         logoImageView.centerInContainer().Width == logoImageView.Height
 
-        loginView.centerVertically().trailing(80).Leading == CenterX + 80
+        loginView.centerVertically().trailing(80).Leading == logoView.Trailing + 80
 
         loginTitleLabel.top(0).fillHorizontally()
         fieldsStack.centerVertically().fillHorizontally().Top == loginTitleLabel.Bottom + 60
@@ -68,14 +68,14 @@ final class LoginView: UICodeView {
         }
 
         usernameLabel.style { s in
-            s.text = "Matrícula"
+            s.text = "Usuário"
             s.textColor = .label
             s.font = .systemFont(ofSize: 24)
         }
         usernameTextField.style { s in
             s.font = .systemFont(ofSize: 24)
             s.padding = .init(top: 16, left: 16, bottom: 16, right: 16)
-            s.placeholder = "Matrícula"
+            s.placeholder = "Usuário"
             s.autocapitalizationType = .none
             s.autocorrectionType = .no
             s.spellCheckingType = .no

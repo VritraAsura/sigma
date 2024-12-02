@@ -3,14 +3,8 @@ import Stevia
 
 final class OperationsViewController: UICodeViewController<OperationsView> {
 
-    var operations: [OperationModel] = [
-        .purchaseMock,
-        .purchaseMock,
-        .purchaseMock,
-        .saleMock,
-        .saleMock,
-        .saleMock
-    ]
+    let domain = CoreDataDomain()
+    var operations: [OperationEntity] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,14 +20,25 @@ final class OperationsViewController: UICodeViewController<OperationsView> {
         title = "Operações de compra e venda"
         rootView.tableView.dataSource = self
         rootView.tableView.delegate = self
-        navigationItem.rightBarButtonItem = UIBarButtonItem(
-            title: "Adicionar", style: .done,
-            target: self, action: #selector(newOperationAction)
+        let newPurchase = UIBarButtonItem(
+            title: "Nova Compra", style: .done,
+            target: self, action: #selector(newPurchaseAction)
         )
+        let newSale = UIBarButtonItem(
+            title: "Nova Venda", style: .done,
+            target: self, action: #selector(newSaleAction)
+        )
+        navigationItem.rightBarButtonItems = [newSale, newPurchase]
     }
 
-    @objc private func newOperationAction() {
+    @objc private func newPurchaseAction() {
         let controller = OperationRegisterViewController()
+        controller.operationType = 0
+        navigationController?.pushViewController(controller, animated: true)
+    }
+    @objc private func newSaleAction() {
+        let controller = OperationRegisterViewController()
+        controller.operationType = 1
         navigationController?.pushViewController(controller, animated: true)
     }
 }
@@ -52,6 +57,8 @@ extension OperationsViewController: UITableViewDataSource, UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let controller = OperationRegisterViewController()
+        let operation = operations[indexPath.row]
+        controller.operation = operation
         navigationController?.pushViewController(controller, animated: true)
     }
 }

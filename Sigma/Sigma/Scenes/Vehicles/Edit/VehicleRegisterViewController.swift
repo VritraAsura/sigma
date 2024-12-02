@@ -4,15 +4,8 @@ import UIKit
 final class VehicleRegisterViewController: UICodeViewController<VehicleRegisterView> {
     // Properties
 
-    let vehicleDomain = VehicleDomain()
-
-    weak var vehicle: VehicleEntity?
-
-    lazy var deletionAlert = UIOptionAlert(
-        title: "Confirmar Exclusão",
-        message: "Você deseja excluir este veículo",
-        view: self
-    )
+    let domain = CoreDataDomain()
+    var vehicle: VehicleEntity?
 
     // Lifecycle
 
@@ -38,11 +31,6 @@ final class VehicleRegisterViewController: UICodeViewController<VehicleRegisterV
             navigationItem.rightBarButtonItems = [deleteButton, saveButton]
         }
 
-        deletionAlert.addAction(style: .cancel, title: "Cancelar")
-        deletionAlert.addAction(style: .destructive, title: "Excluir") { [weak self] _ in
-            self?.deleteVehicle()
-        }
-
         let tap = UITapGestureRecognizer(target: self, action: #selector(selectImage))
         rootView.vehicleImageView.addGestureRecognizer(tap)
         rootView.vehicleImageView.isUserInteractionEnabled = true
@@ -58,33 +46,26 @@ final class VehicleRegisterViewController: UICodeViewController<VehicleRegisterV
     }
     
     @objc private func saveVehicle() {
-        print("Salvar")
-        vehicleDomain.addOrUpdateVehicle(
-            uri: vehicle?.objectID.uriRepresentation(),
-            imageData: rootView.vehicleImageView.image?.pngData() ?? Data(),
-            chassi: rootView.chassiTextField.string,
-            brand: rootView.brandTextField.string,
-            model: rootView.modelTextField.string,
-            manufactureYear: rootView.manufactureYearTextField.string,
-            modelYear: rootView.modelYearTextField.string,
-            color: rootView.colorTextField.string,
-            plate: rootView.plateTextField.string,
-            price: rootView.priceTextField.decimal,
-            isAvailable: vehicle?.isAvailable ?? true
-        )
+        domain.addOrUpdate(entity: vehicle) { s in
+            s.imageData = rootView.vehicleImageView.image?.pngData() ?? Data()
+            s.chassi = rootView.chassiTextField.string
+            s.brand = rootView.brandTextField.string
+            s.model = rootView.modelTextField.string
+            s.manufactureYear = rootView.manufactureYearTextField.string
+            s.modelYear = rootView.modelYearTextField.string
+            s.color = rootView.colorTextField.string
+            s.plate = rootView.plateTextField.string
+            s.price = NSDecimalNumber(decimal: rootView.priceTextField.decimal)
+            s.isAvailable = vehicle?.isAvailable ?? true
+        }
         navigationController?.popViewController(animated: true)
     }
 
     @objc private func deletionConfirmation() {
-        deletionAlert.present()
-    }
-
-    private func deleteVehicle() {
-        print("Excluir")
-        if let vehicle = vehicle {
-            vehicleDomain.deleteVehicle(vehicle)
+        showDeleteAlert { [self] _ in
+            domain.deleteEntity(vehicle)
+            navigationController?.popViewController(animated: true)
         }
-        navigationController?.popViewController(animated: true)
     }
 }
 

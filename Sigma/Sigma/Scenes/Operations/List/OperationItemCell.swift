@@ -29,12 +29,12 @@ final class OperationItemCell: UICodeTableViewCell {
 
     // Functions
 
-    func update(model: OperationModel) {
-        switch model {
-        case .purchase:
-            typeLabel.text = "Compra"
-        case .sales:
+    func update(model: OperationEntity) {
+        switch model.type {
+        case 0:
             typeLabel.text = "Venda"
+        default:
+            typeLabel.text = "Compra"
         }
     }
 }
